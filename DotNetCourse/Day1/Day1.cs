@@ -129,10 +129,19 @@ namespace DotNetCourse.Day1
 
 		public static void Reverse(LinkedListNode<String> node)
 		{
-			
-			
+
+			LinkedList<String> list = node.List;
+
+			if (node.Next != null)
+			{
+				Reverse(node.Next);
+				list.Remove(node);
+				list.AddLast(node);
+
+			}
 
 
+					   			 		  		  		 	   		
 		}
 
 		public static void PrintList(LinkedList<String> linked)
