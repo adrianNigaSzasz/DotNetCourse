@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCourse", "DotNetCourse\DotNetCourse.csproj", "{77DE68A0-C16F-4892-B079-10E3367F1A53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCourse", "DotNetCourse\DotNetCourse.csproj", "{77DE68A0-C16F-4892-B079-10E3367F1A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoursesTests", "DotNetCoursesTests\DotNetCoursesTests.csproj", "{A4CD4E56-A9F8-4624-8F82-717E7D066E4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{77DE68A0-C16F-4892-B079-10E3367F1A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77DE68A0-C16F-4892-B079-10E3367F1A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77DE68A0-C16F-4892-B079-10E3367F1A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4CD4E56-A9F8-4624-8F82-717E7D066E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CD4E56-A9F8-4624-8F82-717E7D066E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CD4E56-A9F8-4624-8F82-717E7D066E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CD4E56-A9F8-4624-8F82-717E7D066E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
