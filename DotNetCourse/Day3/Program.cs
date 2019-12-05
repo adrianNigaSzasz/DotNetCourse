@@ -43,7 +43,7 @@ namespace DotNetCourse.Day3
 
 			timer.Start();
 
-			// 3 ==============================================================
+			// 2 ==============================================================
 
 			
 			List<string> l = new List<string>();
@@ -56,7 +56,7 @@ namespace DotNetCourse.Day3
 			Console.WriteLine(l.Sum());
 			Console.WriteLine(l.Average());
 
-			// 1 ==============================================================
+			// 3 ==============================================================
 	
 			MyIntList l = new MyIntList(0, 100);
 			l.Add(1);
@@ -83,7 +83,16 @@ namespace DotNetCourse.Day3
 				Console.WriteLine(e.Message);
 
 			}
+
+
+
+			// 4 ==============================================================
 			
+			
+			
+			LinqAndLamdaExpressions.Program.Main();
+
+
 
 			// 5 ==============================================================
 			Clock c = new Clock(DateTime.Parse("2019-12-04T19:00:00"));
@@ -119,7 +128,6 @@ namespace DotNetCourse.Day3
 			}
 			*/
 
-			LinqAndLamdaExpressions.Program.Main();
 
 		}
 
