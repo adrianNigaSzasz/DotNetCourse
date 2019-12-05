@@ -87,12 +87,12 @@ namespace DotNetCourse.Day3
 
 
 			// 4 ==============================================================
-			
+			*/
 			
 			
 			LinqAndLamdaExpressions.Program.Main();
 
-
+			/*
 
 			// 5 ==============================================================
 			Clock c = new Clock(DateTime.Parse("2019-12-04T19:00:00"));

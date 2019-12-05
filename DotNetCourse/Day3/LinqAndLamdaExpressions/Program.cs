@@ -95,28 +95,78 @@
 			Console.WriteLine(post2.Title + " " + post2.Id);
 
 			// 6 - print the name of the employee that have post with longest body.
-			//var employee = (from user in allUsers join post in allPosts on user.Id equals post.Id group post by user.Id into g orderby g.Key.ToString().Length select new { name = User. }).FirstOrDefault();
+			var employee = (
+					from user in allUsers join post in allPosts on user.Id equals post.Id 
+					let c = (int)post.Body.Length
+					orderby c descending
+					select user
+					).FirstOrDefault();
 
-			//Console.WriteLine(employee.);
+			Console.WriteLine("name of the employee that have post with longest body " + employee.Name);
+
 			// 7 - select all addresses in a new List<Address>. print the list.
 
 
+			List<Address> listAddress = new List<Address>(from user in allUsers select user.Address);
+			foreach (var a in listAddress)
+			{
+				Console.WriteLine(a.Street);
+			}
+
 			// 8 - print the user with min lat
+			var minLatUser = (from user in allUsers orderby user.Address.Geo.Lat descending select user).FirstOrDefault();
+			Console.WriteLine("user with min lat " + minLatUser.Name);
 
 
 			// 9 - print the user with max long
+			var maxLatUser = (from user in allUsers orderby user.Address.Geo.Lng descending select user).FirstOrDefault();
+			Console.WriteLine("user with max lng " + minLatUser.Name);
 
 
 			// 10 - create a new class: public class UserPosts { public User User {get; set}; public List<Post> Posts {get; set} }
 			//    - create a new list: List<UserPosts>
 			//    - insert in this list each user with his posts only
+			List<UserPosts> userPosts = new List<UserPosts>();
+			var all = (from user in allUsers join post in allPosts on user.Id equals post.UserId into g select new { User = user, Posts = from p in g select p });
+			foreach (var a in all)
+			{
+				var u = new UserPosts();
+				u.User = a.User;
+				u.Posts = new List<Post>(a.Posts);
+			}
+
+			foreach (var u in all)
+			{
+				Console.WriteLine("-----User "+ u.User.Name + " has the following posts:");
+				foreach (var p in u.Posts)
+				{
+					Console.WriteLine(p.Title);
+
+				}
+				Console.WriteLine("-----");
+			}
+
+
 
 			// 11 - order users by zip code
+			var ordered = from user in allUsers orderby user.Address.Zipcode select user;
+			foreach (var a in ordered)
+			{
+				Console.WriteLine(a.Name);
+			}
+
 
 			// 12 - order users by number of posts
+			/*
+			 * var usersByPosts = from user in allUsers
+							   join post in allPosts on user.Id equals post.UserId
+							   
+							   orderby 
+							   select g;
+							   */
 		}
 
-        private static List<Post> ReadPosts(string file)
+		private static List<Post> ReadPosts(string file)
         {
             return ReadData.ReadFrom<Post>(file);
         }
@@ -126,4 +176,8 @@
             return ReadData.ReadFrom<User>(file);
         }
     }
+	public class UserPosts { 
+		  public User User { get; set; }
+		  public List<Post> Posts { get; set; } 
+	 }
 }
