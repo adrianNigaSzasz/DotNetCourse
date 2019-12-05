@@ -157,13 +157,16 @@
 
 
 			// 12 - order users by number of posts
-			/*
-			 * var usersByPosts = from user in allUsers
-							   join post in allPosts on user.Id equals post.UserId
-							   
-							   orderby 
-							   select g;
-							   */
+			
+			var usersByPosts2 = from user in allUsers join
+								post in allPosts on user.Id equals post.UserId into allg
+								orderby allg.Count()
+								select new { user, c = allg.Count()};
+
+			foreach (var u in usersByPosts2)
+			{
+				Console.WriteLine( u.user.Name + " has " + u.c + " posts");
+			}
 		}
 
 		private static List<Post> ReadPosts(string file)
