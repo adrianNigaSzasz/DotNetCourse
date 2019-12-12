@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <StartupObject>DotNetCourse.Day3.Program</StartupObject>
+    <StartupObject>DotNetCourse.Day4.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -13,11 +13,31 @@
   <ItemGroup>
     <None Remove="Day3\LinqAndLamdaExpressions\Files\posts.json" />
     <None Remove="Day3\LinqAndLamdaExpressions\Files\users.json" />
+    <None Remove="Day4\Tasks\Files\file.0.dat" />
+    <None Remove="Day4\Tasks\Files\file.1.dat" />
+    <None Remove="Day4\Tasks\Files\file.2.dat" />
+    <None Remove="Day4\Tasks\Files\file.3.dat" />
+    <None Remove="Day4\Tasks\Files\file.4.dat" />
+    <None Remove="Day4\Tasks\Files\file.5.dat" />
+    <None Remove="Day4\Tasks\Files\file.6.dat" />
+    <None Remove="Day4\Tasks\Files\file.7.dat" />
+    <None Remove="Day4\Tasks\Files\file.8.dat" />
+    <None Remove="Day4\Tasks\Files\file.9.dat" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Day3\LinqAndLamdaExpressions\Files\posts.json" />
     <EmbeddedResource Include="Day3\LinqAndLamdaExpressions\Files\users.json" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.0.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.1.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.2.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.3.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.4.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.5.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.6.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.7.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.8.dat" />
+    <EmbeddedResource Include="Day4\Tasks\Files\file.9.dat" />
   </ItemGroup>
 
   <ItemGroup>
