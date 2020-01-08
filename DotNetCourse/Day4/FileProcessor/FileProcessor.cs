@@ -33,8 +33,10 @@ namespace DotNetCourse.Day4.FileProcessor
 			var token = this.tokenSource.Token;
 
 			//start the producer
+			
 			this.producer = Task.Factory.StartNew((object c) =>
 			{
+				
 				List<string> loadedFiles = new List<string>();
 				//enter the loop
 				while(true)
@@ -99,7 +101,7 @@ namespace DotNetCourse.Day4.FileProcessor
 							}
 							if (Interlocked.Increment(ref filesProcessed) >= 10)
 							{
-								//halt this mofo thread
+								//halt this thread
 								tokenSource.Cancel();
 								break;
 							}
