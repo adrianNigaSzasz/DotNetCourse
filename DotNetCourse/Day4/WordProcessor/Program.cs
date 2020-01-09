@@ -45,8 +45,32 @@ namespace DotNetCourse.Day4.WordProcessor
 			var groups = wordP.GroupWordsPerCategories();
 			Console.WriteLine("under 5 : {0}\nbetween 5-10 : {1} \nbetween 10-15 : {2} \ngreather than 15 : {3}", groups[0], groups[1], groups[2], groups[3]);
 
+			
+			/*
+			 * 
+			 *	thread 6
+				thread 7
+				thread 5
+				thread 4
+				thread 7
+				thread 6
+				thread 4
+				thread 5
+				thread 9
+				thread 4
+				task 00:00:09.1453272
+				number of words 10000002
+				distinct words 803265
+				found 'alabalaportocala' true
+				under 5 : 1578330
+				between 5-10 : 2112640
+				between 10-15 : 2095210
+				greather than 15 : 2107852
+*/
+
 
 			/*
+			 * 
 			syncron version, just for benchmark and debugging
 			
 			WordProcessor wordP2 = new WordProcessor();

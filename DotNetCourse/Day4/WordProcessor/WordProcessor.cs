@@ -104,8 +104,5 @@ namespace DotNetCourse.Day4.WordProcessor
 			return l;
 		}
 
-
-
-
 	}
 }
